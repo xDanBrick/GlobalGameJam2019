@@ -52,6 +52,8 @@ namespace UnityStandardAssets.Cameras
                     targetUp = Vector3.up;
                 }
                 m_CurrentTurnAmount = Mathf.SmoothDamp(m_CurrentTurnAmount, 1, ref m_TurnSpeedVelocityChange, m_SmoothTurnTime);
+
+              
             }
             else
             {
