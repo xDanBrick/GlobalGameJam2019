@@ -34,6 +34,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public AudioClip lowDecelClip;                                              // Audio clip for low deceleration
         public AudioClip highAccelClip;                                             // Audio clip for high acceleration
         public AudioClip highDecelClip;                                             // Audio clip for high deceleration
+        public AudioClip crashClip;
         public float pitchMultiplier = 1f;                                          // Used for altering the pitch of audio clips
         public float lowPitchMin = 1f;                                              // The lowest possible pitch for the low sounds
         public float lowPitchMax = 6f;                                              // The highest possible pitch for the low sounds
@@ -42,10 +43,12 @@ namespace UnityStandardAssets.Vehicles.Car
         public float dopplerLevel = 1;                                              // The mount of doppler effect used in the audio
         public bool useDoppler = true;                                              // Toggle for using doppler
 
+
         private AudioSource m_LowAccel; // Source for the low acceleration sounds
         private AudioSource m_LowDecel; // Source for the low deceleration sounds
         private AudioSource m_HighAccel; // Source for the high acceleration sounds
         private AudioSource m_HighDecel; // Source for the high deceleration sounds
+        private AudioSource m_CrashClip;
         private bool m_StartedSound; // flag for knowing if we have started sounds
         private CarController m_CarController; // Reference to car we are controlling
 
@@ -80,6 +83,15 @@ namespace UnityStandardAssets.Vehicles.Car
             }
 
             m_StartedSound = false;
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if(collision.gameObject.tag == "Building")
+            {
+                Debug.Log("Crash");
+                m_CrashClip.Play();
+            }
         }
 
 
