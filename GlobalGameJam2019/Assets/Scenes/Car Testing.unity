@@ -438,7 +438,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f789937198bf8649ab82bc97605fa17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suitcase: {fileID: 1829013676234746, guid: 748993b79bb798e469ed7a1bf297c113, type: 2}
+  stuff:
+  - {fileID: 1829013676234746, guid: 748993b79bb798e469ed7a1bf297c113, type: 2}
+  - {fileID: 1562676329630404, guid: ec4cfb79b0b33f24fa1024097bc3ec75, type: 2}
+  - {fileID: 1062341754236370, guid: 8167a02bb116d4a4fa0b63ec4b01d13a, type: 2}
 --- !u!4 &313204965
 Transform:
   m_ObjectHideFlags: 0

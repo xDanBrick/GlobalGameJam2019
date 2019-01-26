@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnStuff : MonoBehaviour {
 
-    [SerializeField] GameObject suitcase;
+    [SerializeField] GameObject[] stuff;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +18,8 @@ public class SpawnStuff : MonoBehaviour {
 
     public void Spawn()
     {
-        Instantiate(suitcase, transform.position, transform.rotation);
+        int thing = (int)Random.Range(0.0f, stuff.Length);
+
+        Instantiate(stuff[thing], transform.position, Random.rotation);
     }
 }

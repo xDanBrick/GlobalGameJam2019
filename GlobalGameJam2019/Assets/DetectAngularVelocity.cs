@@ -7,6 +7,8 @@ public class DetectAngularVelocity : MonoBehaviour {
     [SerializeField] Rigidbody rBody;
     [SerializeField] GameObject stuffSpawner;
 
+    float nextSpawnTime = 0.0f;
+    float interval = 0.25f;
 	// Use this for initialization
 	void Start () {
 		
@@ -17,8 +19,10 @@ public class DetectAngularVelocity : MonoBehaviour {
 
         Debug.Log(rBody.angularVelocity.y);
 
-        if(Mathf.Abs(rBody.angularVelocity.y) > 2)
+        if(Mathf.Abs(rBody.angularVelocity.y) > 2 && Time.time > nextSpawnTime)
         {
+            interval = (0.25f / Mathf.Abs(rBody.angularVelocity.y));
+            nextSpawnTime = Time.time + interval;
             stuffSpawner.GetComponent<SpawnStuff>().Spawn();
         }
 	}
