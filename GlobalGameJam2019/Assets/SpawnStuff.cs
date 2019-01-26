@@ -21,7 +21,7 @@ public class SpawnStuff : MonoBehaviour {
             if (value >= 0 && value <= 100)
             {
                 counter = value;
-                GameObject.Find("TShirtBar").GetComponent<Image>().fillAmount = counter * 0.01f;
+                GameObject.Find("TshirtFill").GetComponent<Image>().fillAmount = counter * 0.01f;
             }
         }
     }
@@ -39,7 +39,7 @@ public class SpawnStuff : MonoBehaviour {
         if(counter > 0)
         {
             --counter;
-            GameObject.Find("TShirtBar").GetComponent<Image>().fillAmount = counter * 0.01f;
+            GameObject.Find("TshirtFill").GetComponent<Image>().fillAmount = counter * 0.01f;
         }
     }
 }
