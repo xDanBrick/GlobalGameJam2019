@@ -55,15 +55,6 @@ namespace UnityStandardAssets.Vehicles.Car
         public float Revs { get; private set; }
         public float AccelInput { get; private set; }
 
-        // FMOD
-
-        [FMODUnity.EventRef]
-        public string PoloEngineEvent = "event:/Polo/PoloEngine";
-        FMOD.Studio.EventInstance PoloEngine;
-
-        [FMODUnity.EventRef]
-        public string PoloSkidEvent = "event:/Polo/PoloSkid";
-        FMOD.Studio.EventInstance PoloSkid;
 
         // Use this for initialization
         private void Start()
@@ -80,19 +71,8 @@ namespace UnityStandardAssets.Vehicles.Car
             m_Rigidbody = GetComponent<Rigidbody>();
             m_CurrentTorque = m_FullTorqueOverAllWheels - (m_TractionControl*m_FullTorqueOverAllWheels);
 
-            PoloEngine.release();
-            PoloEngine = FMODUnity.RuntimeManager.CreateInstance(PoloEngineEvent);
-            //Until Health Bar
-            PoloEngine.setParameterValue("Health", 1);
-            PoloEngine.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
-
-            PoloEngine.start();
         }
 
-        private void Update()
-        {
-            PoloEngine.setParameterValue("Speed", CurrentSpeed);
-        }
 
         private void GearChanging()
         {
@@ -303,7 +283,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 {
                     m_WheelEffects[i].EmitTyreSmoke();
 
-                    PoloSkid = FMODUnity.RuntimeManager.CreateInstance(PoloSkidEvent);
+ 
 
                     // avoiding all four tires screeching at the same time
                     // if they do it can lead to some strange audio artefacts
@@ -322,7 +302,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 // end the trail generation
                 m_WheelEffects[i].EndSkidTrail();
 
-                PoloSkid.release();
+
             }
         }
 
