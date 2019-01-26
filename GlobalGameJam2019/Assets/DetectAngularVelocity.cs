@@ -17,7 +17,7 @@ public class DetectAngularVelocity : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Debug.Log(rBody.angularVelocity.y);
+        Debug.Log(rBody.velocity.y);
 
         if(Mathf.Abs(rBody.angularVelocity.y) > 2 && Time.time > nextSpawnTime)
         {
