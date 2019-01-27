@@ -11,11 +11,12 @@ public class PromptScript : MonoBehaviour {
         timer = 10.0f;
     }
 	
-    public void AddPrompt(string text)
+    public void AddPrompt(string text, Texture texture)
     {
         gameObject.SetActive(true);
         timer = 10.0f;
         transform.Find("PromptText").GetComponent<Text>().text = text;
+        transform.Find("PromptImage").GetComponent<RawImage>().texture = texture;
     }
 
 	// Update is called once per frame
