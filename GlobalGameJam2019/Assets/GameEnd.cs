@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameEnd : MonoBehaviour {
 
-    public static int counter = 0;
+    public static int counter = 100;
     [SerializeField] GameObject endCamera;
     [SerializeField] GameObject ufo;
     [SerializeField] GameObject prompt;
@@ -26,7 +26,7 @@ public class GameEnd : MonoBehaviour {
             Destroy(GameObject.Find("MultipurposeCameraRig"));
             endCamera.SetActive(true);
             ufo.SetActive(true);
-            prompt.GetComponent<PromptScript>().AddPrompt("Your score is " + GameEnd.counter.ToString(), null);
+            prompt.GetComponent<PromptScript>().AddPrompt("Your score is " + counter.ToString(), null);
         }
     }
 }
