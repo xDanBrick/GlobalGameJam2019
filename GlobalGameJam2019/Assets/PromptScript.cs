@@ -16,7 +16,15 @@ public class PromptScript : MonoBehaviour {
         gameObject.SetActive(true);
         timer = 10.0f;
         transform.Find("PromptText").GetComponent<Text>().text = text;
-        transform.Find("PromptImage").GetComponent<RawImage>().texture = texture;
+        if(texture)
+        {
+            transform.Find("PromptImage").GetComponent<RawImage>().texture = texture;
+        }
+        else
+        {
+            Destroy(transform.Find("PromptImage").GetComponent<RawImage>());
+        }
+        
     }
 
 	// Update is called once per frame

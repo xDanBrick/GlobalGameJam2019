@@ -8,22 +8,22 @@ public class SpawnStuff : MonoBehaviour {
     [SerializeField] GameObject prompt;
     [SerializeField] Texture texture;
     [SerializeField] GameObject[] stuff;
-    public int counter = 100;
 	// Use this for initialization
 	void Start () {
-		
-	}
+        GameEnd.counter = 100;
+
+    }
 
 	
 	public int stuffCount
     {
-        get { return counter; }
+        get { return GameEnd.counter; }
         set
         {
             if (value >= 0 && value <= 100)
             {
-                counter = value;
-                GameObject.Find("TshirtFill").GetComponent<Image>().fillAmount = counter * 0.01f;
+                GameEnd.counter = value;
+                GameObject.Find("TshirtFill").GetComponent<Image>().fillAmount = GameEnd.counter * 0.01f;
             }
         }
     }
@@ -35,14 +35,14 @@ public class SpawnStuff : MonoBehaviour {
 
     public void Spawn()
     {
-        if (counter > 0)
+        if (GameEnd.counter > 0)
         {
             int thing = (int)Random.Range(0.0f, stuff.Length);
             Instantiate(stuff[thing], transform.position, Random.rotation);
 
-            --counter;
-            GameObject.Find("TshirtFill").GetComponent<Image>().fillAmount = counter * 0.01f;
-            if (counter == 0)
+            --GameEnd.counter;
+            GameObject.Find("TshirtFill").GetComponent<Image>().fillAmount = GameEnd.counter * 0.01f;
+            if (GameEnd.counter == 0)
             {
                 prompt.GetComponent<PromptScript>().AddPrompt("Fill up your belongings at the nearest Home Bargins", texture);
             }

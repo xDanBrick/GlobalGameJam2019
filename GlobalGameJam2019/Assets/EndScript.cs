@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Cameras;
 
 public class EndScript : MonoBehaviour {
 
@@ -8,6 +9,8 @@ public class EndScript : MonoBehaviour {
     [SerializeField] GameObject plane;
     [SerializeField] GameObject newCaravanStuff;
     [SerializeField] GameObject oldCaravanStuff;
+    [SerializeField] GameObject cam;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -24,8 +27,9 @@ public class EndScript : MonoBehaviour {
         {
             
             plane.SetActive(true);
-            newCaravanStuff.GetComponent<SpawnStuff>().counter = oldCaravanStuff.GetComponent<SpawnStuff>().counter;
+            cam.GetComponent<AutoCam>().m_Target = plane.transform.GetChild(2);
             Destroy(car);
+            Destroy(GameObject.Find("MinimapCamera"));
         }
     }
 }
