@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class SpawnStuff : MonoBehaviour {
 
+    [SerializeField] GameObject prompt;
     [SerializeField] GameObject[] stuff;
     public int counter = 100;
 	// Use this for initialization
@@ -33,15 +34,19 @@ public class SpawnStuff : MonoBehaviour {
 
     public void Spawn()
     {
-        
 
-        if(counter > 0)
+
+        if (counter > 0)
         {
             int thing = (int)Random.Range(0.0f, stuff.Length);
             Instantiate(stuff[thing], transform.position, Random.rotation);
 
             --counter;
             GameObject.Find("TshirtFill").GetComponent<Image>().fillAmount = counter * 0.01f;
+        }
+        else
+        {
+            prompt.GetComponent<PromptScript>().AddPrompt("Fill up your belongings at the nearest Home Bargins");
         }
     }
 }
