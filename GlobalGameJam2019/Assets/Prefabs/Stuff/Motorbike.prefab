@@ -465,6 +465,7 @@ GameObject:
   - component: {fileID: 54376343539457636}
   - component: {fileID: 114013428186991744}
   - component: {fileID: 114817611282304462}
+  - component: {fileID: 114714400619652534}
   m_Layer: 10
   m_Name: Motorbike
   m_TagString: Untagged
@@ -2060,6 +2061,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4659c56bc8daec747a4ceb0aa589b6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114714400619652534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1980802122228886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db7a10efc37874338a26996fb8806821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WhooshEvent: event:/Stuff/Whoosh
 --- !u!114 &114817611282304462
 MonoBehaviour:
   m_ObjectHideFlags: 1

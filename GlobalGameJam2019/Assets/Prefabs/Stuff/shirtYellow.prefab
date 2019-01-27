@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114116755561182922}
   - component: {fileID: 65061021901323164}
   - component: {fileID: 54171314853923686}
+  - component: {fileID: 114083844900840072}
   m_Layer: 10
   m_Name: shirtYellow
   m_TagString: Untagged
@@ -143,6 +144,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 36.879303, y: 62.150673, z: 5.498251}
   m_Center: {x: 0.5200138, y: 135.23457, z: -2.190908}
+--- !u!114 &114083844900840072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1386485510233318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db7a10efc37874338a26996fb8806821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WhooshEvent: event:/Stuff/Whoosh
 --- !u!114 &114116755561182922
 MonoBehaviour:
   m_ObjectHideFlags: 1

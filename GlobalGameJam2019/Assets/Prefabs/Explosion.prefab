@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4976187675413170}
   - component: {fileID: 114860161576268668}
   - component: {fileID: 114620109685535572}
+  - component: {fileID: 114105341139223826}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
@@ -320,6 +321,18 @@ Transform:
   m_Father: {fileID: 4976187675413170}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114105341139223826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1122540754993298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06ea6c4f0c3f4f2a8955cc660b3e9ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionHitEvent: event:/UFO/ExplosionHit
 --- !u!114 &114620109685535572
 MonoBehaviour:
   m_ObjectHideFlags: 1

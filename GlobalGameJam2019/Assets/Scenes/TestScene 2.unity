@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 60068407}
-  m_IndirectSpecularColor: {r: 0.47164118, g: 0.30217373, b: 0.3147454, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7764,6 +7764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f789937198bf8649ab82bc97605fa17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prompt: {fileID: 0}
   stuff:
   - {fileID: 1829013676234746, guid: 748993b79bb798e469ed7a1bf297c113, type: 2}
   - {fileID: 1562676329630404, guid: ec4cfb79b0b33f24fa1024097bc3ec75, type: 2}
@@ -22504,6 +22505,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2594826, y: 2.3096614, z: 7.238791}
   m_Center: {x: 0.081261575, y: 0.049830757, z: 3.618922}
+--- !u!1 &1537684501 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1519269598213822, guid: 788dc047bd0ded8449fdaabd78e2e110,
+    type: 2}
+  m_PrefabInternal: {fileID: 1836606908}
+--- !u!114 &1537684502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1537684501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1 &1537882818 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1721791124504852, guid: 46efe2459a1ec1c4890d407add40fc62,
