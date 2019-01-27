@@ -193,7 +193,6 @@ GameObject:
   - component: {fileID: 4421202567862576}
   - component: {fileID: 33785807018480306}
   - component: {fileID: 23937955451198938}
-  - component: {fileID: 65718940225825402}
   m_Layer: 12
   m_Name: MapSign
   m_TagString: Untagged
@@ -233,8 +232,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1655413575804092}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -37.21, y: -0.27, z: 180.27}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -526.4, y: -0.29, z: 93.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4773591948404712}
@@ -249,7 +248,7 @@ Transform:
   - {fileID: 4421202567862576}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &4277819767535924
 Transform:
   m_ObjectHideFlags: 1
@@ -283,7 +282,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1931063408384708}
   m_LocalRotation: {x: -0.00000013240823, y: -0.7071068, z: 0.7071068, w: -0.00000013240823}
-  m_LocalPosition: {x: 0.00000023841858, y: 72.3, z: -2.4599993}
+  m_LocalPosition: {x: 0.00000023841858, y: 107, z: -2.4599993}
   m_LocalScale: {x: 38.5095, y: 34.05071, z: 2.3921244}
   m_Children: []
   m_Father: {fileID: 4051899686179632}
@@ -579,7 +578,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: bca8239854ab21a49b0fddb1c0e24eb9, type: 2}
   - {fileID: 2100000, guid: 8ce3f9563d9ceb34ab32ecb445e847d9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -715,18 +713,6 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1883751122954554}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65718940225825402
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1931063408384708}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
