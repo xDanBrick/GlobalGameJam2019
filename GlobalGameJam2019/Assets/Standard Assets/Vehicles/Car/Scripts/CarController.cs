@@ -55,7 +55,17 @@ namespace UnityStandardAssets.Vehicles.Car
         public float Revs { get; private set; }
         public float AccelInput { get; private set; }
 
+        [FMODUnity.EventRef]
+        public string CarEngineEvent = "event:/Car/CarEngine";
+        FMOD.Studio.EventInstance CarEngine;
 
+        [FMODUnity.EventRef]
+        public string SkidEvent = "event/Car/Skid";
+        FMOD.Studio.EventInstance Skid;
+
+        [FMODUnity.EventRef]
+        public string TakeDamageEvent = "event:/Car/TakeDamage";
+        FMOD.Studio.EventInstance TakeDamage;
 
         // Use this for initialization
         private void Start()
@@ -72,9 +82,25 @@ namespace UnityStandardAssets.Vehicles.Car
             m_Rigidbody = GetComponent<Rigidbody>();
             m_CurrentTorque = m_FullTorqueOverAllWheels - (m_TractionControl*m_FullTorqueOverAllWheels);
 
+            CarEngine = FMODUnity.RuntimeManager.CreateInstance(CarEngineEvent);
+            CarEngine.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+            CarEngine.start();
+
         }
 
+        private void Update()
+        {
+            CarEngine.setParameterValue("Speed", CurrentSpeed);
 
+            if(Skidding)
+            {
+                Skid.start();
+            }
+            else
+            {
+                Skid.release();
+            }
+        }
 
 
         private void GearChanging()
