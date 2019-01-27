@@ -207,7 +207,7 @@ MonoBehaviour:
   ExplosionParticles: {fileID: 1122540754993298, guid: 52e95bd41c9e7e64f8f4f892b41ef3b9,
     type: 2}
   power: 1000
-  radius: 20
+  radius: 25
   upForce: 1
 --- !u!135 &135190567046898924
 SphereCollider:
