@@ -14,12 +14,12 @@ public class RefillStuff : MonoBehaviour {
 		
 	}
 
-    private void OnTriggerStay(Collider2D collision)
+    private void OnTriggerStay(Collider collider)
     {
         Debug.Log("Trigger");
-        if(collision.tag == "Caravan")
+        if(collider.tag == "Caravan")
         {
-            collision.transform.Find("Stuff Spawner").GetComponent<SpawnStuff>().stuffCount++;
+            collider.transform.Find("Stuff Spawner").GetComponent<SpawnStuff>().stuffCount++;
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 #if UNITY_EDITOR
 
 #endif
@@ -62,6 +63,15 @@ namespace UnityStandardAssets.Cameras
                 // This section allows the camera to stop following the target's rotation when the target is spinning too fast.
                 // eg when a car has been knocked into a spin. The camera will resume following the rotation
                 // of the target when the target's angular velocity slows below the threshold.
+                if(CrossPlatformInputManager.GetButton("LookBack"))
+                {
+                    targetForward = m_Target.forward * -1;
+                }
+                else
+                {
+                    targetForward = m_Target.forward;
+                }
+
                 var currentFlatAngle = Mathf.Atan2(targetForward.x, targetForward.z)*Mathf.Rad2Deg;
                 if (m_SpinTurnLimit > 0)
                 {
