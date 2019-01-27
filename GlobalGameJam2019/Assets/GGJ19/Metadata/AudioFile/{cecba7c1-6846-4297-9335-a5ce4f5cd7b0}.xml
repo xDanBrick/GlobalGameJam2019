@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{cecba7c1-6846-4297-9335-a5ce4f5cd7b0}">
+        <property name="assetPath">
+            <value>Stuff/436541__mafon2__cat-meow.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.57201814058956912</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{27787ae6-6d42-4f22-85db-4c78cc8a9a7f}</destination>
+        </relationship>
+    </object>
+</objects>
