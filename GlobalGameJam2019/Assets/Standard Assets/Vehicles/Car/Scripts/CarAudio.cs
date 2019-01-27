@@ -35,6 +35,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public AudioClip highAccelClip;                                             // Audio clip for high acceleration
         public AudioClip highDecelClip;                                             // Audio clip for high deceleration
         public AudioClip crashClip;
+        public AudioClip carHorn;
         public float pitchMultiplier = 1f;                                          // Used for altering the pitch of audio clips
         public float lowPitchMin = 1f;                                              // The lowest possible pitch for the low sounds
         public float lowPitchMax = 6f;                                              // The highest possible pitch for the low sounds
@@ -49,6 +50,7 @@ namespace UnityStandardAssets.Vehicles.Car
         private AudioSource m_HighAccel; // Source for the high acceleration sounds
         private AudioSource m_HighDecel; // Source for the high deceleration sounds
         private AudioSource m_CrashClip;
+        private AudioSource m_carHorn;
         private bool m_StartedSound; // flag for knowing if we have started sounds
         private CarController m_CarController; // Reference to car we are controlling
 

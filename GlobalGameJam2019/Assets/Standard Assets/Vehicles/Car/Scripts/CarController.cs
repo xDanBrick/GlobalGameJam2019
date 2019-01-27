@@ -74,6 +74,9 @@ namespace UnityStandardAssets.Vehicles.Car
 
         }
 
+
+
+
         private void GearChanging()
         {
             float f = Mathf.Abs(CurrentSpeed/MaxSpeed);
