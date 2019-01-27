@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DeleteAfterSeconds : MonoBehaviour {
 
+    
 	// Use this for initialization
 	void Start () {
         StartCoroutine(DeleteGameObject());
